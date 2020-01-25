@@ -44,7 +44,7 @@ let authenticate = async (req, res) => {
                     }
                 );
                 // update user with token & limit
-                await UserModel.findOneAndUpdate({
+                await UserModel.updateOne({
                     email: req.body.email
                 }, {
                     email: req.body.email,
@@ -79,7 +79,7 @@ let authenticate = async (req, res) => {
                         }
                     );
                     // update user with token & limit
-                    await UserModel.findOneAndUpdate({
+                    await UserModel.updateOne({
                         email: req.body.email
                     }, {
                         email: req.body.email,

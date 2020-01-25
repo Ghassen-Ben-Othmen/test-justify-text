@@ -4,6 +4,8 @@ const {
     register,
     authenticate
 } = require('./controllers/user.controller');
+const justify = require("./controllers/service.controller");
+const verifyToken = require("./middleware/verifyToken");
 
 // config dotenv
 require("dotenv").config();
@@ -19,6 +21,7 @@ app.use(express.json())
 app.use(express.urlencoded({
     extended: false
 }))
+app.use(express.text())
 
 // //test route
 // app.get("/", (req, res) => {
@@ -32,6 +35,9 @@ app.post("/api/register", register)
 
 // user login
 app.post("/api/token", authenticate)
+
+// justify text route
+app.post("/api/justify", verifyToken, justify)
 
 // connect to database
 mongoose
