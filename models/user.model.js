@@ -12,7 +12,8 @@ const userSchema = new Schema({
         default: ""
     },
     limit: {
-        type: mongoose.Schema.Types.Number
+        type: mongoose.Schema.Types.Number,
+        default: 0
     }
 })
 
