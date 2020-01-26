@@ -4,7 +4,9 @@ const {
     register,
     authenticate
 } = require('./controllers/user.controller');
-const justify = require("./controllers/service.controller");
+const {
+    justify
+} = require("./controllers/service.controller");
 const verifyToken = require("./middleware/verifyToken");
 
 // config dotenv

@@ -62,14 +62,12 @@ let authenticate = async (req, res) => {
                     // check token
                     jwt.verify(user.token, process.env.JWT_KEY);
                     // if token not expired
-                    console.log("not expired")
                     return res.status(200).json({
                         auth: true,
                         token: user.token
                     })
                 } catch (err) {
                     // if token expired then generate new one
-                    console.log("expired!!")
                     token = jwt.sign({
                             email: user.email,
                             userId: user._id
