@@ -4,6 +4,16 @@
 
 C'est une application qui expose des endpoints permettant à un utilisateur de créer un compte et de s'authentifier pour consulter un endpoint /api/justify pour justifier un texte donné.
 
+## Run
+
+1. Clone
+
+2. `npm install` pour installer les dépendances.
+
+3. `npm run test` pour exécuter les tests.
+
+4. `npm start` pour lancer l'application.
+
 ## Principe
 
 - Il faut tout d'abord créer un compte `/api/register` avec une requête http POST contenant un body de la forme `{"email": foo@bar.com}`.
@@ -25,3 +35,7 @@ Pour ce faire j'ai utilisé:
 - [Express.js](https://expressjs.com/fr/): C'est un framework JavaScript permettant le routage de l'application et la création des endpoints.
 
 - [JsonwebToken](https://www.npmjs.com/package/jsonwebtoken): C'est module JavaScript permettant la création des token.
+
+## Author
+
+- Ghassen BEN OTHMEN
