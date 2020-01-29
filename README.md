@@ -22,7 +22,7 @@ C'est une application qui expose des endpoints permettant à un utilisateur de c
 
 - Pour faire la justification du texte, l'endpoint `/api/justify` permet de récupérer un texte avec une requête Http POST contenant le texte avec un `ContentType: text/plain`. L'endpoint retourne une réponse Http avec un texte justifié.
 
-- Le champ `limit` dans `User Model` permet de vérifier si un utilisateur a atteint sa limite (80 000 motes par jour). Si c'est le cas, alors une reponse Http avec un status code 402 sera retournée.
+- Le champ `limit` dans `User Model` permet de vérifier si un utilisateur a atteint sa limite (80 000 mots par jour). Si c'est le cas, alors une reponse Http avec un status code 402 sera retournée.
 
 ## Les outils utilisés
 
